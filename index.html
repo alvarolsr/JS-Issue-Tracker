@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JS Issue Tracker</h1>
+      <h3>Add New Issue:</h3>
+      <form id="issueInputForm">
+        <div class="form-group">
+          <label for="issueDescInput">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="issueDescInput"
+            placeholder="Describe the issue..."
+          />
+        </div>
+
+        <button type="submit" class="submit-button" onclick="addIssue()">
+          Add
+        </button>
+      </form>
+      <button class="submit-button" onclick="showIssues()">Show</button>
+    </div>
+    <div class="container">
+      <div id="issuesList"></div>
+    </div>
+    <script type="text/javascript" src="js/script2.js"></script>
+    <script type="text/javascript" src="js/chance.js"></script>
+  </body>
+</html>
