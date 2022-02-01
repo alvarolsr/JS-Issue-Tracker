@@ -11,22 +11,23 @@ function addIssue() {
 
   localStorage.setItem("issue", JSON.stringify(issue));
 
-  console.log(issue);
+  console.log(issueId);
+  console.log(issueDesc);
 
-  localStorage.setItem("test", 1);
+  //localStorage.setItem("test", 1);
 
-  alert(localStorage.getItem("test"));
+  //alert(localStorage.getItem("test"));
 
-  /*
-  issuesList.innerHTML +=
+  document.getElementById("issuesList").innerHTML +=
     '<div class="issue">' +
     "<h6>Issue ID: " +
     issueId +
-    "perro" +
     "</h6>" +
     "<h6>Issue desc: " +
     issueDesc +
-    "</h6></div>";*/
+    "</h6></div>";
+
+  //e.preventDefault();
 }
 
 //localStorage.setItem("test", 1);
