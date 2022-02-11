@@ -54,6 +54,8 @@ function showIssues() {
   var issues = JSON.parse(localStorage.getItem("issues"));
   var issuesList = document.getElementById("issuesList");
 
+  console.log(issues);
+
   issuesList.innerHTML = "";
 
   for (var i = 0; i < issues.length; i++) {

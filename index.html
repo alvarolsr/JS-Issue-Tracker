@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script type="text/javascript" src="js/script2.js"></script>
   </head>
   <body>
     <div class="container">
@@ -17,7 +18,26 @@
             type="text"
             class="form-control"
             id="issueDescInput"
-            placeholder="Describe the issue..."
+            placeholder="Describe the issue ..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="issueSeverityInput">Severity</label>
+          <select id="issueSeverityInput" class="form-control">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="issueAssignedToInput">Assigned To</label>
+          <input
+            type="text"
+            class="form-control"
+            id="issueAssignedToInput"
+            placeholder="Enter responsible ..."
           />
         </div>
 
