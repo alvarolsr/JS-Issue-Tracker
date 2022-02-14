@@ -1,24 +1,26 @@
 function addIssue() {
-  var issueDesc = document.getElementById("issueDescInput").value;
-  var issueSeverity = document.getElementById("issueSeverityInput").value;
-  var issueAssignedTo = document.getElementById("issueAssignedToInput").value;
-  var issueId = chance.guid();
+  let issueDesc = document.getElementById("issueDescInput").value;
+  let issueSeverity = document.getElementById("issueSeverityInput").value;
+  let issueAssignedTo = document.getElementById("issueAssignedToInput").value;
+  let issueId = chance.guid();
+  let issueStatus = "Open";
 
   //var issuesList = document.getElementById("issuesList").innerHTML;
 
-  var issue = {
+  let issue = {
     id: issueId,
     description: issueDesc,
     severity: issueSeverity,
     responsible: issueAssignedTo,
+    status: issueStatus,
   };
 
   if (localStorage.getItem("issues") == null) {
-    var issues = [];
+    let issues = [];
     issues.push(issue);
     localStorage.setItem("issues", JSON.stringify(issues));
   } else {
-    var issues = JSON.parse(localStorage.getItem("issues"));
+    let issues = JSON.parse(localStorage.getItem("issues"));
     issues.push(issue);
     localStorage.setItem("issues", JSON.stringify(issues));
   }
@@ -29,9 +31,9 @@ function addIssue() {
 }
 
 function setStatusClosed(id) {
-  var issues = JSON.parse(localstorage.getItem("issues"));
+  let issues = JSON.parse(localStorage.getItem("issues"));
 
-  for (var i = 0; i < issues.length; i++) {
+  for (let i = 0; i < issues.length; i++) {
     if (issues[i].id == id) {
       issues[i].status = "Closed";
     }
@@ -43,17 +45,18 @@ function setStatusClosed(id) {
 }
 
 function showIssues() {
-  var issues = JSON.parse(localStorage.getItem("issues"));
-  var issuesList = document.getElementById("issuesList");
+  let issues = JSON.parse(localStorage.getItem("issues"));
+  let issuesList = document.getElementById("issuesList");
 
   issuesList.innerHTML = "";
 
-  for (var i = 0; i < issues.length; i++) {
-    var issue = issues[i];
-    var issueId = issue.id;
-    var issueDesc = issue.description;
-    var issueSeverity = issue.severity;
-    var issueResponsible = issue.responsible;
+  for (let i = 0; i < issues.length; i++) {
+    let issue = issues[i];
+    let issueId = issue.id;
+    let issueDesc = issue.description;
+    let issueSeverity = issue.severity;
+    let issueResponsible = issue.responsible;
+    let issueStatus = issue.status;
 
     issuesList.innerHTML +=
       '<div class="issue">' +
@@ -68,6 +71,13 @@ function showIssues() {
       "</h6>" +
       "<h6>Assigned To: " +
       issueResponsible +
-      "</h6></div>";
+      "</h6>" +
+      "<h6>Issue Status: " +
+      issueStatus +
+      "</h6>" +
+      "<button type='button' onclick='setStatusClosed(\"" +
+      issueId +
+      "\")'>Close</button>" +
+      "</div>";
   }
 }
