@@ -74,7 +74,7 @@ function showIssues() {
     let issueStatus = issue.status;
 
     issuesList.innerHTML +=
-      '<div class="issue">' +
+      '<div class="issue-box">' +
       "<h6>Issue ID: " +
       issueId +
       "</h6>" +
@@ -90,10 +90,10 @@ function showIssues() {
       "<h6>Issue Status: " +
       issueStatus +
       "</h6>" +
-      "<button type='button' onclick='setStatusClosed(\"" +
+      "<button class='close-button' type='button' onclick='setStatusClosed(\"" +
       issueId +
       "\")'>Close</button>" +
-      "<button type='button' onclick='deleteIssue(\"" +
+      "<button class='delete-button' type='button' onclick='deleteIssue(\"" +
       issueId +
       "\")'>Delete</button>";
     ("</div>");

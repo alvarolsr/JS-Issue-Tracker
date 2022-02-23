@@ -13,6 +13,7 @@
   <body>
     <div class="container">
       <h1>JS Issue Tracker</h1>
+      <div class="form-box">
       <h3>Add New Issue:</h3>
       <form id="issueInputForm">
         <div class="form-group">
@@ -47,10 +48,11 @@
         <button type="button" class="submit-button" onclick="addIssue()">
           Add
         </button>
+        <button type="button" class="submit-button" onclick="showIssues()">View Issues
+        </button>
+      </div>
       </form>
-      <!--<button type="button" class="submit-button" onclick="showIssues()">
-        Show
-      </button>-->
+      
     </div>
     <div class="container">
       <div id="issuesList"></div>
