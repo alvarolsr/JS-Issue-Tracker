@@ -99,3 +99,5 @@ function showIssues() {
     ("</div>");
   }
 }
+
+window.onload = showIssues();

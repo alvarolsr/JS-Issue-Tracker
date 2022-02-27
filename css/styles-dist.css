@@ -61,13 +61,15 @@ button {
   padding: 4px 8px;
   border-style: none;
   border-radius: 4px;
-  background-color: #007bff;
+  /*background-color: #007bff;*/
+  background-color: #0d6efd;
   color: white;
 }
 
 button:hover {
-  -webkit-box-shadow: 0px 0px 2px 1px grey;
-          box-shadow: 0px 0px 2px 1px grey;
+  /*box-shadow: 0px 0px 2px 1px grey;*/
+  background-color: rgb(11, 93, 214);
+  /*transition: background-color 0.3s ease;*/
 }
 
 input,
@@ -87,15 +89,18 @@ select {
 
 .close-button {
   margin-right: 4px;
-  background-color: orange;
+  background-color: #f0ad4e;
+}
+
+.close-button:hover {
+  background-color: #ec971f;
 }
 
 .delete-button {
   margin-left: 4px;
-  background-color: red;
+  background-color: #dc3545;
 }
 
-/*.close-button:hover,
 .delete-button:hover {
-  box-shadow: 0px 0px 2px 1px grey;
-}*/
+  background-color: #bb2d3b;
+}
