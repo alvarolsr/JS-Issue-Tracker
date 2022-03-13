@@ -1,12 +1,3 @@
-/*----------------------------------------
-
-Description of functions
-
-
-
-
-------------------------------------------*/
-
 /*****************************************
  * Function: addIssue()
  *
@@ -45,7 +36,7 @@ function addIssue() {
     localStorage.setItem("issues", JSON.stringify(issues));
   }
 
-  document.getElementById("issueInputForm").reset();
+  /*document.getElementById("issueInputForm").reset();*/
 
   console.log("done");
 
